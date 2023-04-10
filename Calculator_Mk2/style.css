@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/*Colors*/
+:root {
+	--operation: #6D676E;
+	--input: #1B1B1E;
+	--key: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 50%, rgba(57,56,56,1) 100%);
+	--key-color: #fff;
+	--key-hover: linear-gradient(283deg, rgba(133,133,133,1) 0%, rgba(181,181,181,1) 50%, rgba(200,200,200,1) 100%);
+	--key-hover-color: #000000;
+	--operator: #E1DAE0;
+	--operator-color: #000000;
+	--operator-hover: #525252;
+	--operator-hover-color: #fff;
+	--action: #6D676E;
+	--action-color: #fff;
+	--return: linear-gradient(120deg, rgba(250,169,22,1) 0%, rgba(223,148,13,1) 50%, rgba(203,132,4,1) 100%);
+	--return-color: #000000;
+	--return-hover: linear-gradient(315deg, rgba(250,102,22,1) 0%, rgba(223,69,13,1) 50%, rgba(203,34,4,1) 100%);
+	--content-border: linear-gradient(180deg, rgba(172,178,180,1) 40%, rgba(0,0,0,1) 60%);
+	--key-active: #ccbdbd;
+
+/*Transitions*/
+	--tran-02: all 0.2s ease-out;
+	--tran-03: all 0.3s ease-out;
+	--tran-04: all 0.4s ease-out;
+	--tran-05: all 0.5s ease-out;
+}
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	background: #EAEBEC;
+}
+
+.calculator {
+	width: 475.5px;
+}
+
+.content-border {
+	position: relative;
+	display: block;
+	background: var(--content-border);
+}
+
+#operation {
+	height: 110px;
+}
+
+#input {
+	height: 150px;
+}
+
+.keyboard {
+	display: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.row {
+	width: 100%;
+}
+
+.key {
+	width: 79px;
+	height: 39px;
+	color: var(--key-color);
+	padding: 20px;
+	display: inline-block;
+	font-size: 25px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: -4px;
+	background: var(--key);
+	user-select: none;
+}
+
+.key:hover {
+	background: var(--key-hover);
+	color: var(--key-hover-color);
+}
+
+.key:active {
+	background: var(--key-active);
+	box-shadow: 0 0 15px grey inset;
+}
+
+.dot {
+	font-size: 40px;
+}
+
+
+.action{
+	background: var(--action);
+	color: var(--action-color);
+}
+
+.operator {
+	background: var(--operator);
+	color: var(--operator-color);
+}
+
+.operator:hover {
+	background: var(--operator-hover);
+	color: var(--operator-hover-color);
+}
+
+.operator:active {
+	background: var(--key-active);
+	color: #000000;
+}
+
+.return {
+	background: var(--return);
+	color: var(--return-color);
+}
+
+.return:hover {
+	background: var(--return-hover);
+}
+
+.return:active {
+	background: var(--key-active);;
+}
