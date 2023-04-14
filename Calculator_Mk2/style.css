@@ -36,6 +36,8 @@ body {
 
 .container {
 	width: 100%;
+	min-width: 375px;
+	min-width: 640px;
 	height: 100%;
 	justify-content: center;
 	align-items: center;
@@ -53,16 +55,32 @@ body {
 	background: var(--content-border);
 }
 
-#operation {
-	height: 110px;
+.display {
+	position: relative;
+	display: block;
+	background: var(--content-border);
 }
 
-#input {
+.input {
+	user-select: none;
+	height: 110px;
+	color: #000000;
+	font-size: 50px;
+	text-align: right;
+	bottom: 0;
+    right: 0;
+}
+
+.output {
 	height: 150px;
+	user-select: none;
+	color: #fff;
+	font-size: 50px;
+	text-align: right;
 }
 
 .keyboard {
-	display: center;
+	position: relative;
 	align-items: center;
 	justify-content: center;
 }
@@ -72,6 +90,8 @@ body {
 }
 
 .key {
+	user-select: none;
+	cursor: pointer;
 	width: 79px;
 	height: 39px;
 	color: var(--key-color);
@@ -82,7 +102,6 @@ body {
 	vertical-align: middle;
 	margin-right: -4px;
 	background: var(--key);
-	user-select: none;
 }
 
 .key:hover {
@@ -100,7 +119,8 @@ body {
 }
 
 
-.action{
+.action,
+.clear {
 	background: var(--action);
 	color: var(--action-color);
 }
