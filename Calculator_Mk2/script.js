@@ -1,8 +1,9 @@
 const keys = document.querySelectorAll('.key');
-const display_input = document.querySelector('.input');
-const display_output = document.querySelector('.output');
+const display_input = document.querySelector('.input .in');
+const display_output = document.querySelector('.output .out');
 
 let input = "";
+
 for (let key of keys) {
     const value = key.dataset.key;
 
@@ -99,14 +100,19 @@ function ValidateInput(value) {
     let last_input = input.slice(-1);
     let operators_validate = ["+", "-", "*", "/"];
 
-    if (value == "." && last_input == ".") {
-        return false;
-    }
+
+/*  
+    if (value == "." && input.includes(".")) return
+    if (value == "%" && input.includes("%")) return 
+*/
+
 
     if (operators_validate.includes(value)) {
         if (operators_validate.includes(last_input)) {
+
             return false;
         } else {
+
             return true;
         }
     }

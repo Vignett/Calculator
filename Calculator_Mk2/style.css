@@ -4,21 +4,24 @@
 :root {
 	--operation: #6D676E;
 	--input: #1B1B1E;
-	--key: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 50%, rgba(57,56,56,1) 100%);
-	--key-color: #fff;
+	--input-color: #fff;
+	--output-color: #fff;
+	--key: #84948c;
+	--key-color: #000000;
 	--key-hover: linear-gradient(283deg, rgba(133,133,133,1) 0%, rgba(181,181,181,1) 50%, rgba(200,200,200,1) 100%);
 	--key-hover-color: #000000;
-	--operator: #E1DAE0;
+	--operator: #dbfbf3;
 	--operator-color: #000000;
 	--operator-hover: #525252;
 	--operator-hover-color: #fff;
-	--action: #6D676E;
-	--action-color: #fff;
+	--action: #9ed2c4;
+	--action-color: #000000;
 	--return: linear-gradient(120deg, rgba(250,169,22,1) 0%, rgba(223,148,13,1) 50%, rgba(203,132,4,1) 100%);
 	--return-color: #000000;
 	--return-hover: linear-gradient(315deg, rgba(250,102,22,1) 0%, rgba(223,69,13,1) 50%, rgba(203,34,4,1) 100%);
-	--content-border: linear-gradient(180deg, rgba(172,178,180,1) 40%, rgba(0,0,0,1) 60%);
+	--content-border: linear-gradient(180deg, #84948c 45%, rgba(0,0,0,1) 45%);
 	--key-active: #ccbdbd;
+	--calculator: #244444;
 
 /*Transitions*/
 	--tran-02: all 0.2s ease-out;
@@ -46,7 +49,11 @@ body {
 }
 
 .calculator {
-	width: 475.5px;
+	user-select: none;
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+	background: var(--calculator);
 }
 
 .content-border {
@@ -56,27 +63,39 @@ body {
 }
 
 .display {
-	position: relative;
-	display: block;
 	background: var(--content-border);
+	border-radius: 10px;
+	margin-bottom: 5px;
 }
 
 .input {
 	user-select: none;
 	height: 110px;
-	color: #000000;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.input .in {
+	font-weight: 600;
 	font-size: 50px;
-	text-align: right;
-	bottom: 0;
-    right: 0;
+	color: var(--input-color);
+	margin-right: 10px;
 }
 
 .output {
-	height: 150px;
 	user-select: none;
-	color: #fff;
-	font-size: 50px;
-	text-align: right;
+	height: 150px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.output .out {
+	font-weight: 600;
+	font-size: 60px;
+	color: var(--output-color);
+	margin-right: 10px;
 }
 
 .keyboard {
@@ -85,22 +104,20 @@ body {
 	justify-content: center;
 }
 
-.row {
-	width: 100%;
-}
-
 .key {
+	font-weight: 600;
+	border-radius: 10px;
 	user-select: none;
 	cursor: pointer;
-	width: 79px;
-	height: 39px;
+	width: 80px;
+	height: 100%;
 	color: var(--key-color);
 	padding: 20px;
 	display: inline-block;
 	font-size: 25px;
 	text-align: center;
 	vertical-align: middle;
-	margin-right: -4px;
+	margin: 2px;
 	background: var(--key);
 }
 
@@ -114,11 +131,6 @@ body {
 	box-shadow: 0 0 15px grey inset;
 }
 
-.dot {
-	font-size: 40px;
-}
-
-
 .action,
 .clear {
 	background: var(--action);
@@ -128,11 +140,6 @@ body {
 .operator {
 	background: var(--operator);
 	color: var(--operator-color);
-}
-
-.operator:hover {
-	background: var(--operator-hover);
-	color: var(--operator-hover-color);
 }
 
 .operator:active {
