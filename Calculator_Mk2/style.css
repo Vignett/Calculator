@@ -78,7 +78,7 @@ body {
 
 .input .in {
 	font-weight: 600;
-	font-size: 50px;
+	font-size: 45px;
 	color: var(--input-color);
 	margin-right: 10px;
 }
@@ -93,7 +93,7 @@ body {
 
 .output .out {
 	font-weight: 600;
-	font-size: 60px;
+	font-size: 50px;
 	color: var(--output-color);
 	margin-right: 10px;
 }
